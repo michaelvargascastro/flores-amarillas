@@ -1,0 +1,55 @@
+:root{
+  --cream:#fff8e8; --cream2:#f8edcf; --gold:#efb82f; --gold2:#ffd766;
+  --ink:#392d24; --green:#6e7d48; --shadow:0 18px 50px rgba(77,52,19,.15);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Montserrat",sans-serif;overflow-x:hidden}
+.section{min-height:100svh;display:grid;place-items:center;position:relative;padding:72px 22px;overflow:hidden}
+.content{width:min(100%,520px);text-align:center;position:relative;z-index:2}
+.hero{background:radial-gradient(circle at 50% 25%,#fffdf7 0,#fff4cf 48%,#f4c94d 160%)}
+.hero:before,.hero:after,.paper:before,.paper:after{content:"🌻";position:absolute;font-size:clamp(90px,22vw,180px);filter:saturate(.95);opacity:.95}
+.hero:before{left:-35px;bottom:-25px;transform:rotate(-16deg)} .hero:after{right:-40px;top:-30px;transform:rotate(20deg)}
+.paper{background:linear-gradient(145deg,#fffaf0,#fff2cd)}
+.paper:before{left:-65px;top:22%;font-size:110px;opacity:.45}.paper:after{right:-70px;bottom:5%;font-size:125px;opacity:.55}
+h1,h2,h3,p{margin-top:0} h1{font-family:"Great Vibes",cursive;font-weight:400;font-size:clamp(68px,18vw,110px);line-height:.86;margin:22px 0 34px}
+h1 span{display:inline-block;margin-top:12px} h1 b,h2 span{color:var(--gold);font-weight:400}
+h2{font-family:"Cormorant Garamond",serif;font-size:clamp(38px,10vw,58px);line-height:1;margin-bottom:18px}
+h3{font-family:"Cormorant Garamond",serif;font-size:29px;margin:20px 0 8px}
+p{font-family:"Cormorant Garamond",serif;font-size:21px;line-height:1.45}
+.lead{font-size:24px}.eyebrow{font-family:"Montserrat",sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:12px;font-weight:600}
+.quote{font-style:italic;margin-top:46px;opacity:.72}
+.button{display:inline-block;border:0;text-decoration:none;color:#3d301f;background:linear-gradient(135deg,#ffd866,#efb932);padding:15px 28px;border-radius:999px;font:600 15px "Montserrat";box-shadow:0 8px 24px rgba(196,139,17,.25);cursor:pointer;transition:.25s}
+.button:hover{transform:translateY(-2px) scale(1.02)}
+.flower{position:absolute;font-size:52px;animation:float 4s ease-in-out infinite}.flower-a{left:9%;top:22%}.flower-b{right:10%;bottom:25%;animation-delay:-2s}
+.polaroid{background:#fff;padding:11px 11px 24px;margin:32px auto 18px;width:min(88%,360px);box-shadow:var(--shadow);transform:rotate(-1deg)}
+.polaroid img,.photo-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#f1dfaa}
+.polaroid figcaption{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:22px;letter-spacing:.16em;padding-top:18px}
+.tilt-left{transform:rotate(-3deg)}.tilt-right{transform:rotate(3deg)}
+.placeholder img{visibility:hidden}.placeholder:before{content:"Añade aquí tu foto";display:grid;place-items:center;aspect-ratio:4/3;background:linear-gradient(135deg,#f5e6b8,#fff8e5);font-family:"Cormorant Garamond";font-size:24px;color:#8a6e38}
+.memory{background:linear-gradient(#fff9e9,#f8e7b5)}
+.reasons{background:#fff8e6}
+.sunflower-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:32px 0}
+.reason{border:0;background:transparent;font:500 15px "Montserrat";color:var(--ink);cursor:pointer;padding:5px}
+.reason span{display:block;font-size:62px;margin-bottom:8px;filter:drop-shadow(0 6px 7px rgba(75,48,5,.14));transition:.25s}
+.reason:hover span,.reason.active span{transform:scale(1.15) rotate(7deg)}
+.reason.wide{grid-column:1/-1}.note{background:#f6e2a9;padding:16px 20px;transform:rotate(-2deg);font:italic 20px "Cormorant Garamond";box-shadow:0 7px 18px rgba(50,34,10,.12);min-height:70px;display:grid;place-items:center}
+.bouquet{background:linear-gradient(#fff9eb,#fff0bf)}
+.bouquet-art{font-size:58px;line-height:.9;margin:28px auto;filter:drop-shadow(0 16px 18px rgba(78,54,9,.18))}
+.bouquet-art span{font-size:48px}.big-line{font-size:24px}
+.final-message{background:linear-gradient(#f9df9a 0,#fff7e6 35%,#fff8e8)}
+.script{font-family:"Great Vibes";font-size:72px;font-weight:400}
+.photo-card{margin:0 auto 22px;width:min(92%,400px);padding:10px;background:#fff;box-shadow:var(--shadow)}
+.letter{background:rgba(255,250,237,.94);padding:24px;border-radius:4px;box-shadow:0 10px 30px rgba(79,50,13,.1)}
+.signature{font-family:"Great Vibes";font-size:54px;margin-bottom:0}
+.ending{background:#735b28;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.ending-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(1px)}
+.overlay{position:absolute;inset:0;background:linear-gradient(rgba(38,27,7,.34),rgba(59,40,6,.58));z-index:1}
+.heart{font:72px "Great Vibes";}.date{font:600 18px "Montserrat";letter-spacing:.18em}.infinity{font-size:36px;margin:18px}
+.closing{display:inline-block;background:rgba(255,248,226,.88);color:#4b3a20;text-shadow:none;padding:15px 20px;border-radius:6px;font-style:italic;margin:25px 0 35px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}.reveal.visible{opacity:1;transform:none}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:20;overflow:hidden}.petal{position:absolute;top:-30px;font-size:18px;animation:fall linear forwards;opacity:.8}
+@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(520deg);opacity:.2}}
+@keyframes float{50%{transform:translateY(-12px) rotate(4deg)}}
+@media(min-width:700px){.section{padding:90px 30px}.sunflower-grid{gap:26px}.reason span{font-size:72px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.flower,.petal{animation:none}}
